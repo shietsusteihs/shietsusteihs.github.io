@@ -1,0 +1,713 @@
+/* Header Styles */
+
+
+
+
+.header-top {
+    background-color: #b7393b;
+    padding: 15px 0;
+}
+
+
+
+
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 40px; /* 基础高度 */
+    width: auto;
+    object-fit: contain; /* 保持图片比例 */
+    max-width: 200px; /* 最大宽度限制 */
+}
+
+/* 大屏幕 */
+@media (min-width: 1200px) {
+    .logo-image {
+        height: 50px;
+    }
+}
+
+/* 平板 */
+@media (max-width: 991px) {
+    .logo-image {
+        height: 35px;
+    }
+}
+
+/* 手机 */
+@media (max-width: 576px) {
+    .logo-image {
+        height: 30px;
+    }
+}
+
+/* 确保logo容器有足够的点击区域 */
+.logo-link {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+
+/* 确保图片不会超出容器 */
+.logo-link img {
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+.contact-section-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.wechat-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #7ed321;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wechat-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-button-1 {
+    background-color: #1a237e;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    white-space: nowrap;
+    box-shadow: 0 0 0 1px white;
+    display: inline-block;
+}
+
+.contact-button:hover {
+    background-color: #1a237e;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .contact-button {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+    
+    .wechat-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+
+/* Navigation Styles */
+.nav-main {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    padding: 0 1rem;
+}
+
+/* 修改分隔线样式 */
+.vertical-divider {
+    width: 1px;
+    height: 30px;
+    background-color: #dee2e6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 导航链接样式 */
+.nav-main .nav-link {
+    color: #333;
+    font-size: 1.1rem;
+    padding: 1rem 0.5rem;
+    position: relative;
+}
+
+/* 下拉菜单样式 */
+.dropdown-menu {
+    border-radius: 0;
+    border: none;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    min-width: 200px;
+    margin-top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 991px) {
+    .vertical-divider {
+        display: none;
+    }
+    
+    .nav-item {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .nav-main .nav-link {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+/* Content Sections */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+
+/* Target Section */
+.target-section {
+    background-color: #fff9e6;  /* 浅黄色背景 */
+    padding: 3rem 0;
+}
+
+.target-section-title {
+    color: #1a237e;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.target-card {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.target-card:hover {
+    transform: translateY(-5px);
+}
+
+.target-image {
+    width: 100%;
+    height: 300px;
+    background-color: #1a237e;  /* 深蓝色背景 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.target-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 确保图片填充空间但不变形 */
+}
+
+.target-text {
+    padding: 1.5rem;
+    text-align: center;
+    background: white;
+    font-size: 1.1rem;
+}
+
+
+/* Services Section */
+.services-section {
+    padding: 4rem 0;
+}
+
+.services-title {
+    color: #1a237e;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.service-item {
+    margin-bottom: 4rem;
+}
+
+.service-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    border: 2px solid #b7393b;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 35%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.service-content h3 {
+    color: #b7393b;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-content p {
+    color: #1a237e;
+    line-height: 1.8;
+}
+
+.contact-button {
+    background-color: #b7393b;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.contact-button:hover {
+    background-color: #a33234;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .service-item, .service-item:nth-child(even) {
+        flex-direction: column;
+    }
+    .service-image {
+        margin-bottom: 1.5rem;
+    }
+    .service-content {
+        text-align: center;
+    }
+}
+
+
+
+
+/* Success Story Section */
+.success-section {
+    background-color: #ffe6e6;
+    padding: 3rem 0;
+    position: relative;
+}
+
+
+.success-title {
+    text-align: center;
+    color: #b7393b;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+
+.success-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 新增容器来实现居中 */
+.slider-container {
+    max-width: 1000px; /* 限制最大宽度 */
+    margin: 0 auto; /* 居中显示 */
+    position: relative;
+    padding: 0 50px; /* 为箭头留出空间 */
+}
+
+.success-slides {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* 使用更平滑的过渡效果 */
+    position: relative;
+}
+
+.success-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.success-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center; /* 内容居中 */
+    max-width: 900px; /* 限制内容最大宽度 */
+    margin: 0 auto; /* 内容居中 */
+}
+
+.success-image {
+    width: 100px;
+    height: 100px;
+    background-color: #b7393b;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.success-content {
+    flex-grow: 1;
+}
+
+.success-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #b7393b;
+}
+
+.success-date {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.success-text {
+    color: #1a237e;
+    line-height: 1.8;
+}
+
+.pdf-preview {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 180px;
+    height: 220px;
+    flex-shrink: 0; /* 防止PDF预览区域被压缩 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a237e;
+    font-size: 1.2rem;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #808080;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.slider-prev {
+    left: 0;
+}
+
+.slider-next {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .success-slide {
+        padding: 0 30px;
+    }
+    
+    .success-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .pdf-preview {
+        width: 150px;
+        height: 180px;
+    }
+    
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
+
+
+/* Contact Form */
+.contact-section {
+    position: relative;
+    background: repeating-linear-gradient(
+        45deg,
+        #f5f5f5,
+        #f5f5f5 10px,
+        #ffffff 10px,
+        #ffffff 20px
+    );
+    padding: 4rem 0;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.contact-title {
+    color: #1a237e;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #1a237e;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #1a237e;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a237e' d='M6 9L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    appearance: none;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #1a237e;
+    border-radius: 4px;
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    display: block;
+    width: auto;
+    margin: 2rem auto 0;
+    padding: 0.75rem 3rem;
+    background-color: #b7393b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+}
+
+.submit-button::after {
+    content: "▶";
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+}
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #1a237e;
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-contact {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-contact-text {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.wechat-circle {
+    background-color: #7ed321;
+}
+
+.other-circle {
+    background-color: #808080;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+
+.back-to-top {
+    position: fixed;  /* 固定定位 */
+    bottom: 20px;    /* 距离底部20px */
+    right: 20px;     /* 距离右侧20px */
+    width: 50px;     /* 按钮宽度 */
+    height: 50px;    /* 按钮高度 */
+    background-color: rgba(0, 0, 0, 0.5);  /* 半透明背景 */
+    border-radius: 50%;  /* 圆形按钮 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    z-index: 999;  /* 确保按钮在最上层 */
+    transition: background-color 0.3s;
+}
+
+/* 添加向上箭头 */
+.back-to-top::before {
+    content: "▲";
+    display: block;
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+/* 悬停效果 */
+.back-to-top:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+}
+
+/* 适配移动端 */
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+    }
+}
